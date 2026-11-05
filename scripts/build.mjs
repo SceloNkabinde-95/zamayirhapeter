@@ -1,0 +1,23 @@
+import { readFile, mkdir, rm, cp, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { renderPage } from '../src/render.mjs';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const site = JSON.parse(await readFile(resolve(root, 'content/site.json'), 'utf8'));
+const config = JSON.parse(await readFile(resolve(root, 'config/site.json'), 'utf8'));
+const { html, structuredData } = renderPage(site, config);
+const dist = resolve(root, 'dist');
+await rm(dist, { recursive: true, force: true });
+await mkdir(dist, { recursive: true });
+await cp(resolve(root, 'public'), dist, { recursive: true });
+await writeFile(resolve(dist, 'index.html'), html);
+await cp(resolve(root, 'src/styles.css'), resolve(dist, 'styles.css'));
+await cp(resolve(root, 'src/app.js'), resolve(dist, 'app.js'));
+const hash = createHash('sha256').update(structuredData).digest('base64');
+const headers = `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-${hash}'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'\n${config.production ? '' : '  X-Robots-Tag: noindex, nofollow\n'}\n/assets/*\n  Cache-Control: public, max-age=86400\n\n/styles.css\n  Cache-Control: public, max-age=3600\n\n/app.js\n  Cache-Control: public, max-age=3600\n`;
+await writeFile(resolve(dist, '_headers'), headers);
+await writeFile(resolve(dist, 'robots.txt'), config.production ? `User-agent: *\nAllow: /\nSitemap: ${site.originalSite}sitemap.xml\n` : 'User-agent: *\nDisallow: /\n');
+if (config.production) await writeFile(resolve(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${site.originalSite}</loc></url></urlset>`);
+console.log(`Built static homepage (${config.production ? 'production' : 'private review'}): dist/`);
