@@ -1,0 +1,94 @@
+{
+  "name": "Zamayirha Peter",
+  "title": "Zamayirha Peter — Stories that move people",
+  "description": "Communications consultant, multimedia journalist, speaker and moderator. Meet Zamayirha Peter and explore storytelling with purpose.",
+  "originalSite": "https://www.zamayirhapeter.co.za/",
+  "contact": {
+    "email": "info@zamayirhapeter.co.za",
+    "phone": "+27 79 692 7931",
+    "phoneHref": "+27796927931",
+    "instagram": "https://www.instagram.com/uzamayirha/",
+    "instagramLabel": "@uzamayirha",
+    "linkedin": "https://www.linkedin.com/in/zamayirha-peter-97246072/",
+    "facebook": "https://www.facebook.com/zama.peter"
+  },
+  "hero": {
+    "eyebrow": "Communications. Culture. Change.",
+    "firstName": "zamayirha",
+    "lastName": "peter.",
+    "description": "A storyteller with purpose. A voice for impact.",
+    "image": "/assets/zamayirha-portrait.webp",
+    "mobileImage": "/assets/zamayirha-portrait-mobile.webp",
+    "alt": "Black and white studio portrait of Zamayirha Peter looking towards the camera."
+  },
+  "about": {
+    "label": "The person behind the perspective",
+    "heading": "Good stories connect us. Great ones move us.",
+    "intro": "I’m Zamayirha. A communications consultant, multimedia journalist, speaker and moderator with a belief in the power of a well-told story.",
+    "body": "From the newsroom to conversations with global leaders, my work brings people, ideas and purpose together. I partner with individuals and organisations to communicate clearly, build meaningful connections and advance their impact.",
+    "image": "/assets/zamayirha-studio.webp",
+    "alt": "Zamayirha Peter in a black off-the-shoulder outfit in a studio portrait."
+  },
+  "experience": ["City Press", "HuffPost", "Power FM", "SAfm"],
+  "work": {
+    "heading": "People first.\nAlways.",
+    "intro": "The most meaningful work starts with listening. To the voices shaping our culture. To the people building our communities. To the stories still waiting to be heard.",
+    "items": [
+      {
+        "category": "Conversations & culture",
+        "title": "Making room for stories that matter.",
+        "description": "Interviews and conversations with artists, public figures and changemakers.",
+        "image": "/assets/zamayirha-conversations.webp",
+        "alt": "Zamayirha Peter smiling alongside two guests.",
+        "width": 900,
+        "height": 900
+      },
+      {
+        "category": "Community & perspective",
+        "title": "Meeting people where their stories begin.",
+        "description": "A people-centred approach to journalism and development communications.",
+        "image": "/assets/zamayirha-community.webp",
+        "alt": "Zamayirha Peter in conversation with two people wearing high-visibility workwear at a work site.",
+        "width": 1440,
+        "height": 958
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "communications",
+      "title": "Strategic communications",
+      "summary": "Clarity for your brand. Purpose in every message.",
+      "body": "Communications, media and public relations support for organisations and individual brands. An approach grounded in authentic stories and the people you want to reach.",
+      "tags": ["Brand storytelling", "Media & public relations", "Communications strategy"]
+    },
+    {
+      "id": "journalism",
+      "title": "Multimedia journalism",
+      "summary": "Human stories. Thoughtful questions. Fresh perspective.",
+      "body": "Print, digital and broadcast experience, with contributions to publications including City Press and HuffPost. Reporting and conversations that put people at the centre.",
+      "tags": ["Editorial", "Interviews", "Multimedia storytelling"]
+    },
+    {
+      "id": "speaking",
+      "title": "Speaking & moderation",
+      "summary": "Conversations that stay with you.",
+      "body": "Speaking and moderation on leadership, purpose, education and personal branding. Bringing thoughtful questions and a human perspective to the room.",
+      "tags": ["Panel moderation", "Leadership", "Personal branding"]
+    },
+    {
+      "id": "purpose",
+      "title": "Purpose & mentorship",
+      "summary": "Because your story shouldn’t end with you.",
+      "body": "Through Ideas That Walk, Zamayirha connects leadership, learning and social impact. Sharing knowledge and experience to encourage the people who come next.",
+      "tags": ["Ideas That Walk", "Youth leadership", "Mentorship"]
+    }
+  ],
+  "quote": "This mountain has been assigned to you to show others it can be moved.",
+  "sources": {
+    "home": "https://www.zamayirhapeter.co.za/",
+    "about": "https://www.zamayirhapeter.co.za/about-zamayirha-peter/",
+    "experience": "https://www.zamayirhapeter.co.za/services/",
+    "contact": "https://www.zamayirhapeter.co.za/contact/"
+  }
+}

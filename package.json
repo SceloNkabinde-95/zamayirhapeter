@@ -1,0 +1,14 @@
+{
+  "name": "zamayirha-peter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A portable, pre-rendered portfolio for Zamayirha Peter.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test",
+    "preview": "python3 -m http.server 4173 --directory dist"
+  }
+}
